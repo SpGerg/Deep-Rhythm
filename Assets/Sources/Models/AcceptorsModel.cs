@@ -1,48 +1,42 @@
-﻿using Presenters;
+﻿using Models.Interfaces;
+using Presenters;
 using Presenters.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
+using Views;
 using Views.Acceptors;
+using Views.Interfaces;
 
 namespace Models
 {
     public class AcceptorsModel : ModelBase
     {
         public AcceptorsModel(AcceptorsPresenter presenter,
-            Acceptor[] acceptors,
-            Sprite selected,
-            Sprite unSelected) : base(presenter)
+            AcceptorView[] acceptors) : base(presenter)
         {
             AcceptorsPresenter = presenter;
 
             _acceptors = acceptors;
-            _selected = selected;
-            _unSelected = unSelected;
 
             _current = 1;
-
-            SelectAcceptor();
         }
 
         public AcceptorsPresenter AcceptorsPresenter { get; }
 
-        public Acceptor CurrentAcceptor => _acceptors[_current];
+        public AcceptorView CurrentAcceptor => _acceptors[_current];
 
-        private Acceptor[] _acceptors;
-
-        private Sprite _selected;
-
-        private Sprite _unSelected;
+        private readonly AcceptorView[] _acceptors;
 
         private int _current;
 
         public void OnSelectedLeft()
         {
-            UnSelectAcceptor();
+            CurrentAcceptor.IsSelected = false;
 
             if (_current - 1 < 0)
             {
@@ -53,12 +47,12 @@ namespace Models
                 _current--;
             }
 
-            SelectAcceptor();
+            CurrentAcceptor.IsSelected = true;
         }
 
         public void OnSelectedRight()
         {
-            UnSelectAcceptor();
+            CurrentAcceptor.IsSelected = false;
 
             if (_current + 1 > _acceptors.Length - 1)
             {
@@ -69,39 +63,13 @@ namespace Models
                 _current++;
             }
 
-            SelectAcceptor();
+            CurrentAcceptor.IsSelected = true;
         }
 
-        public bool IsSelected(GameObject target)
+        public void OnCollisionWithEnemy(IEnemyView enemyView)
         {
-            for (var i = 0; i < _acceptors.Length; i++)
-            {
-                var acceptor = _acceptors[i];
-
-                if (acceptor != target)
-                {
-                    continue;
-                }
-
-                if (i != _current)
-                {
-                    return false;
-                }
-
-                return true;
-            }
-
-            return false;
-        }
-
-        private void UnSelectAcceptor()
-        {
-            CurrentAcceptor.Renderer.sprite = _unSelected;
-        }
-
-        private void SelectAcceptor()
-        {
-            CurrentAcceptor.Renderer.sprite = _selected;
+            UnityEngine.Object.Destroy(enemyView.GameObject);
+            EnemyModel.Destroyed.Invoke();
         }
     }
 }

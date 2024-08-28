@@ -14,8 +14,8 @@ namespace Presenters
             View = view;
         }
 
-        public IModel Model { get; }
+        public IModel Model { get; protected set; }
 
-        public IView View { get; }
+        public IView View { get; protected set; }
     }
 }

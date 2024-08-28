@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Views;
+using Views.Editor;
 using Views.Interfaces;
 
 namespace Presenters
@@ -15,6 +16,8 @@ namespace Presenters
         {
             EnemyView = view;
             EnemyModel = new BasicEnemyModel(this, speed);
+
+            Model = EnemyModel;
         }
 
         public BasicEnemyModel EnemyModel { get; }

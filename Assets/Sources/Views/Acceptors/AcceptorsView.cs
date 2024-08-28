@@ -11,8 +11,14 @@ namespace Views
 {
     public class AcceptorsView : ViewBase
     {
+        public Sprite Selected => _selected;
+
+        public Sprite UnSelected => _unSelected;
+
+        internal AcceptorsPresenter AcceptorsPresenter => _acceptorsPresenter;
+
         [SerializeField]
-        private Acceptor[] _acceptors;
+        private AcceptorView[] _acceptors;
 
         [SerializeField]
         private Sprite _selected;
@@ -24,9 +30,16 @@ namespace Views
 
         public void Awake()
         {
-            _acceptorsPresenter = new AcceptorsPresenter(this, _acceptors, _selected, _unSelected);
+            _acceptorsPresenter = new AcceptorsPresenter(this, _acceptors);
 
-            Initialize(_acceptorsPresenter);
+            foreach (var acceptor in _acceptors)
+            {
+                acceptor.InitializeAcceptor(_acceptorsPresenter);
+            }
+
+            _acceptorsPresenter.ChooseCenter();
+
+            base.Initialize(_acceptorsPresenter);
         }
 
         public void OnSelectedLeft()
