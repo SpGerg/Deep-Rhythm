@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Services
 {
-    public abstract class ServiceLocator
+    public class ServiceLocator
     {
         private readonly List<IService> _services = new();
 
@@ -17,7 +17,7 @@ namespace Services
             _services.Add(service);
         }
 
-        public void Unregister<T>() where T : IService, new()
+        public void Unregister<T>() where T : IService
         {
             var service = _services.FirstOrDefault(service1 => service1 is T);
 

@@ -1,25 +1,15 @@
-﻿using Models;
-using Models.Interfaces;
-using Presenters;
-using Presenters.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using Models.GameEditor;
 using Views;
 using Views.Editor;
-using Views.Interfaces;
 
 namespace Presenters
 {
     public class GameEditorPresenter : PresenterBase
     {
-        public GameEditorPresenter(GameEditorView view) : base(view)
+        public GameEditorPresenter(GameEditorView view, GameEditorSlotView[] gameEditorSlots) : base(view)
         {
             GameEditorView = view;
-            GameEditorModel = new GameEditorModel(this);
+            GameEditorModel = new GameEditorModel(this, gameEditorSlots);
         }
 
         protected GameEditorModel GameEditorModel { get; }
@@ -28,14 +18,29 @@ namespace Presenters
 
         public void OnSelected(GameEditorSlotView gameEditorSlotView)
         {
-            if (!gameEditorSlotView.Image.enabled)
+            if (!gameEditorSlotView.IsBusy)
             {
-                GameEditorModel.SetEnemy(gameEditorSlotView.Image);
+                GameEditorModel.SetEnemy(gameEditorSlotView);
             }
             else
             {
-                GameEditorModel.RemoveEnemy(gameEditorSlotView.Image);
+                GameEditorModel.RemoveEnemy(gameEditorSlotView);
             }
+        }
+
+        public void Play()
+        {
+            GameEditorModel.Play();
+        }
+
+        public void NextSection()
+        {
+            GameEditorModel.NextSection();
+        }
+
+        public void PreviousSection()
+        {
+            GameEditorModel.PreviousSection();
         }
     }
 }

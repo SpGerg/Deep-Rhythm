@@ -12,11 +12,18 @@ namespace Views.Editor
     {
         public Image Image => _image;
 
+        public Transform WorldPosition => _worldPosition;
+
+        public bool IsBusy => _image.enabled;
+
         [SerializeField]
         private Image _image;
 
         [SerializeField]
         private GameEditorView _gameEditorView;
+
+        [SerializeField]
+        private Transform _worldPosition;
 
         public void OnSelected()
         {

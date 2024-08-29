@@ -1,16 +1,7 @@
-﻿using Pools;
-using Services;
-using Services.Interfaces;
-using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using Services.Interfaces;
 using Views;
 
-namespace Assets.Sources.Pools
+namespace Pools
 {
     public class EnemiesPoolService : PoolBase<EnemyView>, IService
     {
