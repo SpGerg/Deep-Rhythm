@@ -1,5 +1,6 @@
 using Models.Interfaces;
 using Presenters.Interfaces;
+using System;
 using UnityEngine;
 using Views.Interfaces;
 
@@ -18,6 +19,14 @@ namespace Views
             if (Presenter.Model is IUpdatable updatable)
             {
                 _updatable = updatable;
+            }
+        }
+
+        public void OnDestroy()
+        {
+            if (Presenter is not null && Presenter.Model is IDisposable disposable)
+            {
+                disposable.Dispose();
             }
         }
 

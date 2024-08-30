@@ -64,6 +64,11 @@ namespace Services.Databases
         {
             if (levelType is LevelType.CustomLevel)
             {
+                if (!File.Exists(_editorLevel))
+                {
+                    return null;
+                }
+
                 return JsonUtility.FromJson<LevelData>(File.ReadAllText(_editorLevel));
             }
 

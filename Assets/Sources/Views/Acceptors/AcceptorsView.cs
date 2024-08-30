@@ -28,7 +28,7 @@ namespace Views
 
         private AcceptorsPresenter _acceptorsPresenter;
 
-        public void Awake()
+        public void Start()
         {
             _acceptorsPresenter = new AcceptorsPresenter(this, _acceptors);
 

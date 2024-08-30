@@ -1,14 +1,8 @@
 ﻿using Models.Interfaces;
 using Presenters.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
-using Views;
 
-namespace Assets.Sources.Views
+namespace Views
 {
     public abstract class TransformableView : ViewBase
     {
@@ -28,6 +22,16 @@ namespace Assets.Sources.Views
             transform.SetPositionAndRotation(_transformable.Position, GetRotation());
 
             base.Update();
+        }
+
+        public void SetPosition(Vector2 position)
+        {
+            _transformable.Position = position;
+        }
+
+        public void SetRotation(float rotation) 
+        {
+            _transformable.Rotation = rotation;
         }
 
         private Quaternion GetRotation()

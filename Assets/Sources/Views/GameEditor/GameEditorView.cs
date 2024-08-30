@@ -1,21 +1,50 @@
-﻿using Presenters;
+﻿using Models.GameEditor.Enums;
+using Presenters;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Views.Editor;
+using Views.GameEditor;
 
 namespace Views
 {
     public class GameEditorView : ViewBase
     {
+        [Serializable]
+        public class MusicTypeAndAudioClipPair
+        {
+            public MusicType MusicType { get => _type; }
+
+            public AudioClip AudioClip { get => _audioClip; }
+
+            [SerializeField]
+            private MusicType _type;
+
+            [SerializeField]
+            private AudioClip _audioClip;
+        }
+
         public GameEditorPresenter GameEditorPresenter => _gameEditorPresenter;
 
         [SerializeField]
-        private GameEditorSlotView[] _gameEditorSlots;
+        private AudioSource _audioSource;
+
+        [SerializeField]
+        private MusicLineView _musicLineView;
+
+        [SerializeField]
+        private MusicTypeAndAudioClipPair[] _audioClips;
+
+        private GameEditorSlotView[] _slots;
 
         private GameEditorPresenter _gameEditorPresenter;
 
-        public void Awake()
+        public void Start()
         {
-            _gameEditorPresenter = new GameEditorPresenter(this, _gameEditorSlots);
+            //So long in inspector
+            _slots = FindObjectsOfType<GameEditorSlotView>();
+
+            _gameEditorPresenter = new GameEditorPresenter(this, _slots, _audioSource, _musicLineView, _audioClips);
 
             base.Initialize(_gameEditorPresenter);
         }
@@ -23,6 +52,11 @@ namespace Views
         public void Play()
         {
             _gameEditorPresenter.Play();
+        }
+
+        public void PlayMusicPart()
+        {
+            _gameEditorPresenter.PlayMusicPart();
         }
 
         public void NextSection()
@@ -33,6 +67,11 @@ namespace Views
         public void PreviousSection()
         { 
             GameEditorPresenter.PreviousSection();
+        }
+
+        public void SetMusic(MusicType musicType)
+        {
+            GameEditorPresenter.SetMusic(musicType);
         }
     }
 }

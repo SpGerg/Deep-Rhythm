@@ -9,7 +9,7 @@ namespace Models.GameEditor.Datas
     {
         public int id;
 
-        public Vector2[] enemies;
+        public EnemyData[] enemies;
 
         [NonSerialized]
         public GameEditorSlotView[] slots;

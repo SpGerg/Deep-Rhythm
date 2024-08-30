@@ -1,9 +1,10 @@
 ﻿using Services.Interfaces;
 using Views;
+using Views.Interfaces;
 
 namespace Pools
 {
-    public class EnemiesPoolService : PoolBase<EnemyView>, IService
+    public class EnemiesPoolService : PoolBase<IEnemyView>, IService
     {
         public EnemiesPoolService(EnemyView enemyView)
         {
@@ -12,7 +13,7 @@ namespace Pools
 
         private readonly EnemyView _enemyView;
 
-        protected override EnemyView Create()
+        protected override IEnemyView Create()
         {
             return UnityEngine.Object.Instantiate(_enemyView);
         }

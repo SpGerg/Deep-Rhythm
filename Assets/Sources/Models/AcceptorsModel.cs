@@ -1,14 +1,6 @@
-﻿using Models.Interfaces;
+﻿using Pools;
 using Presenters;
-using Presenters.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Unity.VisualScripting;
-using UnityEngine;
-using Views;
+using Services;
 using Views.Acceptors;
 using Views.Interfaces;
 
@@ -20,6 +12,7 @@ namespace Models
             AcceptorView[] acceptors) : base(presenter)
         {
             AcceptorsPresenter = presenter;
+            _poolService = GameServiceLocator.Get<EnemiesPoolService>();
 
             _acceptors = acceptors;
 
@@ -29,6 +22,8 @@ namespace Models
         public AcceptorsPresenter AcceptorsPresenter { get; }
 
         public AcceptorView CurrentAcceptor => _acceptors[_current];
+
+        private EnemiesPoolService _poolService;
 
         private readonly AcceptorView[] _acceptors;
 
@@ -68,7 +63,8 @@ namespace Models
 
         public void OnCollisionWithEnemy(IEnemyView enemyView)
         {
-            UnityEngine.Object.Destroy(enemyView.GameObject);
+            enemyView.GameObject.SetActive(false);
+            _poolService.Return(enemyView);
             EnemyModel.Destroyed.Invoke();
         }
     }

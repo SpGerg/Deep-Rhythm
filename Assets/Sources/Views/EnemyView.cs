@@ -1,10 +1,4 @@
-﻿using Assets.Sources.Views;
-using Presenters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Presenters;
 using UnityEngine;
 using Views.Interfaces;
 
@@ -12,6 +6,8 @@ namespace Views
 {
     public abstract class EnemyView : TransformableView, IEnemyView
     {
+        public static float GlobalSpeed { get; private set; }
+
         public float Speed => _speed;
 
         public EnemyPresenter EnemyPresenter => _enemyPresenter;
@@ -26,6 +22,8 @@ namespace Views
         public void InitializeEnemy(EnemyPresenter enemyPresenter)
         {
             _enemyPresenter = enemyPresenter;
+
+            GlobalSpeed = _speed;
 
             InitializeTransformable(_enemyPresenter, _enemyPresenter.EnemyModel);
         }
