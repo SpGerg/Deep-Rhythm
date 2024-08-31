@@ -4,6 +4,7 @@ using Pools;
 using Services;
 using Services.Databases.Enums;
 using Services.Databases.Interfaces;
+using System;
 using System.Linq;
 using UnityEngine;
 using Views;
@@ -27,9 +28,11 @@ public class LevelLoader : MonoBehaviour
 
     private EnemiesPoolService _enemiesPoolService;
 
-    private float MusicDelay => 3.35f;
+    private const float DistanceToAcceptors = 9f;
 
-    private const float SectionSize = 15f;
+    private float MusicDelay => DistanceToAcceptors / EnemyView.GlobalSpeed;
+
+    private const float SectionSize = 10f;
 
     private float _nextSectionYPosition;
 
@@ -37,7 +40,16 @@ public class LevelLoader : MonoBehaviour
 
     public void Start()
     {
-        var levelData = GameServiceLocator.Get<IDatabase>().GetLevel(LevelType.CustomLevel);
+        var currentLevel = PlayerPrefs.GetString("level");
+
+        if (!Enum.TryParse<LevelType>(currentLevel, out var levelType))
+        {
+            Debug.LogError($"Unknown level with {currentLevel} name");
+
+            return;
+        }
+
+        var levelData = GameServiceLocator.Get<IDatabase>().GetLevel(levelType);
 
         _enemiesPoolService = GameServiceLocator.Get<EnemiesPoolService>();
 

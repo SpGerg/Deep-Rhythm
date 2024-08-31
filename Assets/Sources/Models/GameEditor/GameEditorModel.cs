@@ -71,7 +71,7 @@ namespace Models.GameEditor
 
         private AudioClip _audioClip;
 
-        private const float SectionTime = 3f;
+        private const float SectionTime = 1.6f;
 
         private const int MainGameSceneId = 0;
 
@@ -231,6 +231,7 @@ namespace Models.GameEditor
                 sections = _sections.Select(pair => pair.Value).ToArray()
             });
 
+            PlayerPrefs.SetString("level", LevelType.CustomLevel.ToString());
             SceneManager.LoadScene(MainGameSceneId);
         }
 

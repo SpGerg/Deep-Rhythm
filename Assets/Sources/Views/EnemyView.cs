@@ -6,24 +6,19 @@ namespace Views
 {
     public abstract class EnemyView : TransformableView, IEnemyView
     {
-        public static float GlobalSpeed { get; private set; }
+        public static float GlobalSpeed { get; private set; } = 6.5f;
 
-        public float Speed => _speed;
+        public float Speed => GlobalSpeed;
 
         public EnemyPresenter EnemyPresenter => _enemyPresenter;
 
         public GameObject GameObject => gameObject;
-
-        [SerializeField]
-        private float _speed = 5f;
 
         private EnemyPresenter _enemyPresenter;
 
         public void InitializeEnemy(EnemyPresenter enemyPresenter)
         {
             _enemyPresenter = enemyPresenter;
-
-            GlobalSpeed = _speed;
 
             InitializeTransformable(_enemyPresenter, _enemyPresenter.EnemyModel);
         }
