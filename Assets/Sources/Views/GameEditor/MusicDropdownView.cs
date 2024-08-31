@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Views.GameEditor
 {
-    public class MusicDropdown : MonoBehaviour
+    public class MusicDropdownView : MonoBehaviour
     {
         [SerializeField]
         private TMP_Dropdown _dropdown;
@@ -15,7 +15,7 @@ namespace Views.GameEditor
 
         public void SetMusicOnValueChanged(int id)
         {
-            _gameEditorView.SetMusic(Enum.Parse<MusicType>(_dropdown.options[id].text.Replace(" ", ""), true));
+            _gameEditorView.GameEditorPresenter.SetMusic(Enum.Parse<MusicType>(_dropdown.options[id].text.Replace(" ", ""), true));
         }
     }
 }

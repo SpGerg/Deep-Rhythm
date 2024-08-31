@@ -1,9 +1,5 @@
 ﻿using Models.GameEditor.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Presenters.GameEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,15 +7,15 @@ namespace Views.Editor
 {
     public class GameEditorSlotView : ViewBase
     {
+        public GameEditorSlotPresenter GameEditorSlotPresenter => _presenter;
+
         public Image Image => _image;
 
         public Transform WorldPosition => _worldPosition;
 
         public SideType SideType => _sideType;
 
-        public bool IsBusy => _image.enabled;
-
-        public int SlotId { get => _slotId; set => _slotId = value; }
+        public int SlotId => _slotId;
 
         [SerializeField]
         private Image _image;
@@ -36,9 +32,18 @@ namespace Views.Editor
         [SerializeField]
         private SideType _sideType;
 
+        private GameEditorSlotPresenter _presenter;
+
+        public void Awake()
+        {
+            _presenter = new GameEditorSlotPresenter(this);
+
+            Initialize(_presenter);
+        }
+
         public void OnSelected()
         {
-            _gameEditorView.GameEditorPresenter.OnSelected(this);
+            _gameEditorView.GameEditorPresenter.OnSelected(_presenter);
         }
     }
 }

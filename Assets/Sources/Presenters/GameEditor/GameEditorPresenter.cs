@@ -6,18 +6,16 @@ using Views;
 using Views.Editor;
 using Views.GameEditor;
 
-namespace Presenters
+namespace Presenters.GameEditor
 {
     public class GameEditorPresenter : PresenterBase
     {
-        public GameEditorPresenter(GameEditorView view, GameEditorSlotView[] _slots, AudioSource audioSource, MusicLineView musicLineView, GameEditorView.MusicTypeAndAudioClipPair[] clips) : base(view)
+        public GameEditorPresenter(GameEditorView view, GameEditorSlotView[] _slots, AudioSource audioSource, MusicLinePresenter musicLinePresenter, GameEditorView.MusicTypeAndAudioClipPair[] clips) : base(view)
         {
             GameEditorView = view;
-            GameEditorModel = new GameEditorModel(this, _slots, audioSource, musicLineView);
+            GameEditorModel = new GameEditorModel(this, _slots.Select(slot => slot.GameEditorSlotPresenter).ToArray(), audioSource, musicLinePresenter);
 
             _clips = clips;
-
-            musicLineView.Initialize(this);
 
             SetMusic(MusicType.BaseAfterBase);
         }
@@ -28,15 +26,15 @@ namespace Presenters
 
         private readonly GameEditorView.MusicTypeAndAudioClipPair[] _clips;
 
-        public void OnSelected(GameEditorSlotView gameEditorSlotView)
+        public void OnSelected(GameEditorSlotPresenter gameEditorSlotPresenter)
         {
-            if (!gameEditorSlotView.IsBusy)
+            if (!gameEditorSlotPresenter.IsBusy)
             {
-                GameEditorModel.SetEnemy(gameEditorSlotView);
+                GameEditorModel.SetEnemy(gameEditorSlotPresenter);
             }
             else
             {
-                GameEditorModel.RemoveEnemy(gameEditorSlotView);
+                GameEditorModel.RemoveEnemy(gameEditorSlotPresenter);
             }
         }
 

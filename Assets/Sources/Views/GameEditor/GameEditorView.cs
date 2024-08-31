@@ -1,7 +1,6 @@
 ﻿using Models.GameEditor.Enums;
-using Presenters;
+using Presenters.GameEditor;
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using Views.Editor;
 using Views.GameEditor;
@@ -44,7 +43,7 @@ namespace Views
             //So long in inspector
             _slots = FindObjectsOfType<GameEditorSlotView>();
 
-            _gameEditorPresenter = new GameEditorPresenter(this, _slots, _audioSource, _musicLineView, _audioClips);
+            _gameEditorPresenter = new GameEditorPresenter(this, _slots, _audioSource, _musicLineView.MusicLinePresenter, _audioClips);
 
             base.Initialize(_gameEditorPresenter);
         }
@@ -67,11 +66,6 @@ namespace Views
         public void PreviousSection()
         { 
             GameEditorPresenter.PreviousSection();
-        }
-
-        public void SetMusic(MusicType musicType)
-        {
-            GameEditorPresenter.SetMusic(musicType);
         }
     }
 }

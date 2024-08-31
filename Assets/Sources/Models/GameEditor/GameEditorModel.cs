@@ -1,6 +1,6 @@
 ﻿using Models.GameEditor.Datas;
 using Models.GameEditor.Enums;
-using Presenters;
+using Presenters.GameEditor;
 using Services;
 using Services.Databases.Enums;
 using Services.Databases.Interfaces;
@@ -16,14 +16,14 @@ namespace Models.GameEditor
 {
     public class GameEditorModel : ModelBase, IDisposable
     {
-        public GameEditorModel(GameEditorPresenter presenter, GameEditorSlotView[] slots, AudioSource audioSource, MusicLineView musicLineView) : base(presenter)
+        public GameEditorModel(GameEditorPresenter presenter, GameEditorSlotPresenter[] slots, AudioSource audioSource, MusicLinePresenter musicLinePresenter) : base(presenter)
         {
             GameEditorPresenter = presenter;
 
-            _musicLineView = musicLineView;
+            _musicLinePresenter = musicLinePresenter;
             _audioSource = audioSource;
 
-            _musicLineView.Ended.AddListener(StopPlayingOnEnded);
+            MusicLineView.Ended.AddListener(StopPlayingOnEnded);
 
             _database = GameEditorServiceLocator.Get<IDatabase>();
             _slots = slots;
@@ -61,13 +61,13 @@ namespace Models.GameEditor
 
         private readonly AudioSource _audioSource;
 
-        private readonly MusicLineView _musicLineView;
+        private readonly MusicLinePresenter _musicLinePresenter;
 
         private readonly IDatabase _database;
 
-        private readonly GameEditorSlotView[] _slots;
+        private readonly GameEditorSlotPresenter[] _slots;
 
-        private readonly List<GameEditorSlotView> _currentSectionEnemies = new();
+        private readonly List<GameEditorSlotPresenter> _currentSectionEnemies = new();
 
         private AudioClip _audioClip;
 
@@ -86,7 +86,7 @@ namespace Models.GameEditor
 
         public void NextSection()
         {
-            var slots = new List<GameEditorSlotView>();
+            var slots = new List<GameEditorSlotPresenter>();
             var enemies = new List<EnemyData>();
 
             foreach (var slot in _currentSectionEnemies)
@@ -96,7 +96,7 @@ namespace Models.GameEditor
                 {
                     enemyType = EnemyType.Circle,
                     sideType = slot.SideType,
-                    y = slot.WorldPosition.position.y,
+                    y = slot.WorldPosition.y,
                     slotId = slot.SlotId
                 });
             }
@@ -137,7 +137,7 @@ namespace Models.GameEditor
                 return;
             }
 
-            var slots = new List<GameEditorSlotView>();
+            var slots = new List<GameEditorSlotPresenter>();
             var enemies = new List<EnemyData>();
 
             foreach (var slot in _currentSectionEnemies)
@@ -147,7 +147,7 @@ namespace Models.GameEditor
                 {
                     enemyType = EnemyType.Circle,
                     sideType = slot.SideType,
-                    y = slot.WorldPosition.position.y,
+                    y = slot.WorldPosition.y,
                     slotId = slot.SlotId
                 });
             }
@@ -189,18 +189,18 @@ namespace Models.GameEditor
             }
         }
 
-        public void SetEnemy(GameEditorSlotView gameEditorSlotView)
+        public void SetEnemy(GameEditorSlotPresenter presenter)
         {
-            gameEditorSlotView.Image.enabled = true;
+            presenter.ToggleImage(true);
 
-            _currentSectionEnemies.Add(gameEditorSlotView);
+            _currentSectionEnemies.Add(presenter);
         }
 
-        public void RemoveEnemy(GameEditorSlotView gameEditorSlotView)
+        public void RemoveEnemy(GameEditorSlotPresenter presenter)
         {
-            gameEditorSlotView.Image.enabled = false;
+            presenter.ToggleImage(false);
 
-            _currentSectionEnemies.Remove(gameEditorSlotView);
+            _currentSectionEnemies.Remove(presenter);
         }
 
         public void Play()
@@ -212,7 +212,7 @@ namespace Models.GameEditor
                 {
                     enemyType = EnemyType.Circle,
                     sideType = enemy.SideType,
-                    y = enemy.WorldPosition.position.y,
+                    y = enemy.WorldPosition.y,
                     slotId = enemy.SlotId
                 }).ToArray()
             };
@@ -241,7 +241,7 @@ namespace Models.GameEditor
             _audioSource.time = SectionTime * _currentSection;
             _audioSource.Play();
 
-            _musicLineView.IsMove = true;
+            _musicLinePresenter.ToggleMove(true);
         }
 
         private void StopPlayingOnEnded()
@@ -256,7 +256,7 @@ namespace Models.GameEditor
                 return;
             }
 
-            _musicLineView.Ended.RemoveListener(StopPlayingOnEnded);
+            MusicLineView.Ended.RemoveListener(StopPlayingOnEnded);
 
             _isDisposed = true;
         }

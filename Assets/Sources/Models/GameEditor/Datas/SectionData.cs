@@ -1,6 +1,5 @@
-﻿using System;
-using UnityEngine;
-using Views.Editor;
+﻿using Presenters.GameEditor;
+using System;
 
 namespace Models.GameEditor.Datas
 {
@@ -12,6 +11,6 @@ namespace Models.GameEditor.Datas
         public EnemyData[] enemies;
 
         [NonSerialized]
-        public GameEditorSlotView[] slots;
+        public GameEditorSlotPresenter[] slots;
     }
 }

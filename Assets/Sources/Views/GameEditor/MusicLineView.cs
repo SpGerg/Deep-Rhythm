@@ -1,58 +1,32 @@
-﻿using UnityEngine;
+﻿using Presenters.GameEditor;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Views.GameEditor
 {
-    public class MusicLineView : ViewBase
+    public class MusicLineView : TransformableView
     {
-        public bool IsMove
-        {
-            get
-            {
-                return _isMove;
-            }
-            set
-            {
-                transform.position = _start;
+        public static UnityEvent Ended { get; } = new();
 
-                _isMove = value;
-            }
-        }
+        public MusicLinePresenter MusicLinePresenter => _musicLinePresenter;
 
-        public UnityEvent Ended { get; } = new();
+        private MusicLinePresenter _musicLinePresenter;
 
         [SerializeField]
         private float _speed;
 
         private Vector2 _start;
 
-        private bool _isMove;
-
         public void Awake()
         {
             _start = transform.position;
-        }
 
-        public override void Update()
-        {
-            if (IsMove)
-            {
-                transform.Translate(_speed * Time.deltaTime * transform.up);
-            }
-
-            base.Update();
+            _musicLinePresenter = new MusicLinePresenter(this, _start, _speed);
         }
 
         public void OnTriggerEnter2D(Collider2D collision)
         {
-            if (!collision.CompareTag("MusicLineEnd"))
-            {
-                return;
-            }
-
-            IsMove = false;
-
-            Ended.Invoke();
+            MusicLinePresenter.OnCollided(collision);
         }
     }
 }

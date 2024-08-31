@@ -1,9 +1,4 @@
 ﻿using Presenters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine.Events;
 using UnityEngine;
 using Models.Interfaces;
@@ -22,7 +17,7 @@ namespace Models
             _speed = speed;
         }
 
-        public EnemyPresenter EnemyPresenter { get; }
+        protected EnemyPresenter EnemyPresenter { get; }
 
         private readonly float _speed;
 

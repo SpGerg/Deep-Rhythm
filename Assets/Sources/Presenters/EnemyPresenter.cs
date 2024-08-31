@@ -18,9 +18,12 @@ namespace Presenters
             EnemyModel = new BasicEnemyModel(this, speed);
 
             Model = EnemyModel;
+
+            view.InitializeEnemy(this);
+            view.InitializeTransformable(this, EnemyModel);
         }
 
-        public BasicEnemyModel EnemyModel { get; }
+        protected BasicEnemyModel EnemyModel { get; }
 
         protected EnemyView EnemyView { get; } 
     }

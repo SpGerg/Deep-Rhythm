@@ -19,8 +19,6 @@ namespace Views
         public void InitializeEnemy(EnemyPresenter enemyPresenter)
         {
             _enemyPresenter = enemyPresenter;
-
-            InitializeTransformable(_enemyPresenter, _enemyPresenter.EnemyModel);
         }
     }
 }
