@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 641675}
   - component: {fileID: 641674}
   - component: {fileID: 641673}
-  - component: {fileID: 641672}
+  - component: {fileID: 641676}
   m_Layer: 5
   m_Name: GreySlot
   m_TagString: Untagged
@@ -163,23 +163,6 @@ RectTransform:
   m_AnchoredPosition: {x: -60.2, y: -240.40001}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &641672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 635457806}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 385909269}
-  _slotId: 24
-  _sideType: 0
 --- !u!114 &641673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 641672}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -274,6 +257,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641670}
   m_CullTransparentMesh: 1
+--- !u!114 &641676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 635457806}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 385909269}
+  _slotId: 24
+  _sideType: 0
 --- !u!1 &14424439
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 16383756}
   - component: {fileID: 16383755}
   - component: {fileID: 16383754}
-  - component: {fileID: 16383753}
+  - component: {fileID: 16383757}
   m_Layer: 5
   m_Name: GreySlot
   m_TagString: Untagged
@@ -346,23 +346,6 @@ RectTransform:
   m_AnchoredPosition: {x: -60.2, y: -0.70001745}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &16383753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 16383751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 164843690}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 1121985825}
-  _slotId: 12
-  _sideType: 0
 --- !u!114 &16383754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,7 +390,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 16383753}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -457,6 +440,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16383751}
   m_CullTransparentMesh: 1
+--- !u!114 &16383757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16383751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 164843690}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 1121985825}
+  _slotId: 12
+  _sideType: 0
 --- !u!1 &46186353
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 46186358}
   - component: {fileID: 46186357}
   - component: {fileID: 46186356}
-  - component: {fileID: 46186355}
+  - component: {fileID: 46186359}
   m_Layer: 5
   m_Name: WhiteSlot
   m_TagString: Untagged
@@ -498,23 +498,6 @@ RectTransform:
   m_AnchoredPosition: {x: 60, y: 179.1}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &46186355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46186353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 1954786630}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 1722199895}
-  _slotId: 5
-  _sideType: 2
 --- !u!114 &46186356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,7 +542,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 46186355}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -609,6 +592,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46186353}
   m_CullTransparentMesh: 1
+--- !u!114 &46186359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46186353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1954786630}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 1722199895}
+  _slotId: 5
+  _sideType: 2
 --- !u!1 &47652068
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 60314045}
   - component: {fileID: 60314044}
   - component: {fileID: 60314043}
-  - component: {fileID: 60314042}
+  - component: {fileID: 60314046}
   m_Layer: 5
   m_Name: WhiteSlot
   m_TagString: Untagged
@@ -725,23 +725,6 @@ RectTransform:
   m_AnchoredPosition: {x: -60, y: 179.1}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &60314042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60314040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 1788360740}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 957873226}
-  _slotId: 3
-  _sideType: 0
 --- !u!114 &60314043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,7 +769,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60314042}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -836,6 +819,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60314040}
   m_CullTransparentMesh: 1
+--- !u!114 &60314046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60314040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1788360740}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 957873226}
+  _slotId: 3
+  _sideType: 0
 --- !u!1 &77876621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,7 +1618,7 @@ GameObject:
   - component: {fileID: 300762590}
   - component: {fileID: 300762589}
   - component: {fileID: 300762588}
-  - component: {fileID: 300762587}
+  - component: {fileID: 300762591}
   m_Layer: 5
   m_Name: WhiteSlot
   m_TagString: Untagged
@@ -1647,23 +1647,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.49999827, y: 119.399994}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &300762587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300762585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 669674295}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 1773371678}
-  _slotId: 7
-  _sideType: 1
 --- !u!114 &300762588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1708,7 +1691,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 300762587}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -1758,6 +1741,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300762585}
   m_CullTransparentMesh: 1
+--- !u!114 &300762591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300762585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 669674295}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 1773371678}
+  _slotId: 7
+  _sideType: 1
 --- !u!1 &314202490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,7 +2113,7 @@ GameObject:
   - component: {fileID: 366467612}
   - component: {fileID: 366467611}
   - component: {fileID: 366467610}
-  - component: {fileID: 366467609}
+  - component: {fileID: 366467613}
   m_Layer: 5
   m_Name: WhiteSlot
   m_TagString: Untagged
@@ -2142,23 +2142,6 @@ RectTransform:
   m_AnchoredPosition: {x: -60, y: 59.5}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &366467609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366467607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 1636873941}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 341734957}
-  _slotId: 9
-  _sideType: 0
 --- !u!114 &366467610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2203,7 +2186,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 366467609}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -2253,6 +2236,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366467607}
   m_CullTransparentMesh: 1
+--- !u!114 &366467613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366467607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1636873941}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 341734957}
+  _slotId: 9
+  _sideType: 0
 --- !u!1 &385909268
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,7 +2842,7 @@ GameObject:
   - component: {fileID: 538833354}
   - component: {fileID: 538833353}
   - component: {fileID: 538833352}
-  - component: {fileID: 538833351}
+  - component: {fileID: 538833355}
   m_Layer: 5
   m_Name: GreySlot
   m_TagString: Untagged
@@ -2871,23 +2871,6 @@ RectTransform:
   m_AnchoredPosition: {x: -60.2, y: 239}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &538833351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538833349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 839614937}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 944207590}
-  _slotId: 0
-  _sideType: 0
 --- !u!114 &538833352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2932,7 +2915,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 538833351}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -2982,6 +2965,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538833349}
   m_CullTransparentMesh: 1
+--- !u!114 &538833355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538833349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 839614937}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 944207590}
+  _slotId: 0
+  _sideType: 0
 --- !u!1 &538850461
 GameObject:
   m_ObjectHideFlags: 0
@@ -2994,7 +2994,7 @@ GameObject:
   - component: {fileID: 538850466}
   - component: {fileID: 538850465}
   - component: {fileID: 538850464}
-  - component: {fileID: 538850463}
+  - component: {fileID: 538850467}
   m_Layer: 5
   m_Name: GreySlot
   m_TagString: Untagged
@@ -3023,23 +3023,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.2, y: 179}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &538850463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538850461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 2113839207}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 1324716243}
-  _slotId: 4
-  _sideType: 1
 --- !u!114 &538850464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3084,7 +3067,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 538850463}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -3134,6 +3117,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538850461}
   m_CullTransparentMesh: 1
+--- !u!114 &538850467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538850461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 2113839207}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 1324716243}
+  _slotId: 4
+  _sideType: 1
 --- !u!1 &549164784
 GameObject:
   m_ObjectHideFlags: 0
@@ -3570,7 +3570,7 @@ GameObject:
   - component: {fileID: 690318777}
   - component: {fileID: 690318776}
   - component: {fileID: 690318775}
-  - component: {fileID: 690318774}
+  - component: {fileID: 690318778}
   m_Layer: 5
   m_Name: WhiteSlot
   m_TagString: Untagged
@@ -3599,23 +3599,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.49999827, y: 239}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &690318774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690318772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 47652070}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 77876622}
-  _slotId: 1
-  _sideType: 1
 --- !u!114 &690318775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3660,7 +3643,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 690318774}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -3710,6 +3693,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690318772}
   m_CullTransparentMesh: 1
+--- !u!114 &690318778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690318772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 47652070}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 77876622}
+  _slotId: 1
+  _sideType: 1
 --- !u!1 &690735565
 GameObject:
   m_ObjectHideFlags: 0
@@ -3897,7 +3897,7 @@ GameObject:
   - component: {fileID: 703355494}
   - component: {fileID: 703355493}
   - component: {fileID: 703355492}
-  - component: {fileID: 703355491}
+  - component: {fileID: 703355495}
   m_Layer: 5
   m_Name: WhiteSlot
   m_TagString: Untagged
@@ -3926,23 +3926,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.49999827, y: -0.7000122}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &703355491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703355489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 314862417}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 1924383696}
-  _slotId: 13
-  _sideType: 1
 --- !u!114 &703355492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3987,7 +3970,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 703355491}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -4037,6 +4020,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 703355489}
   m_CullTransparentMesh: 1
+--- !u!114 &703355495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703355489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 314862417}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 1924383696}
+  _slotId: 13
+  _sideType: 1
 --- !u!1 &760403919
 GameObject:
   m_ObjectHideFlags: 0
@@ -4049,7 +4049,7 @@ GameObject:
   - component: {fileID: 760403924}
   - component: {fileID: 760403923}
   - component: {fileID: 760403922}
-  - component: {fileID: 760403921}
+  - component: {fileID: 760403925}
   m_Layer: 5
   m_Name: WhiteSlot
   m_TagString: Untagged
@@ -4078,23 +4078,6 @@ RectTransform:
   m_AnchoredPosition: {x: -60, y: -60.60002}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &760403921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 760403919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 477976862}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 1891385728}
-  _slotId: 15
-  _sideType: 0
 --- !u!114 &760403922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4139,7 +4122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 760403921}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -4189,6 +4172,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760403919}
   m_CullTransparentMesh: 1
+--- !u!114 &760403925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760403919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 477976862}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 703355490}
+  _slotId: 15
+  _sideType: 0
 --- !u!1 &766056175
 GameObject:
   m_ObjectHideFlags: 0
@@ -4201,7 +4201,7 @@ GameObject:
   - component: {fileID: 766056180}
   - component: {fileID: 766056179}
   - component: {fileID: 766056178}
-  - component: {fileID: 766056177}
+  - component: {fileID: 766056181}
   m_Layer: 5
   m_Name: GreySlot
   m_TagString: Untagged
@@ -4230,23 +4230,6 @@ RectTransform:
   m_AnchoredPosition: {x: 59.8, y: -120.50004}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &766056177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766056175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 1976734123}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 472921118}
-  _slotId: 20
-  _sideType: 2
 --- !u!114 &766056178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4291,7 +4274,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 766056177}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -4341,6 +4324,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766056175}
   m_CullTransparentMesh: 1
+--- !u!114 &766056181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766056175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1976734123}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 472921118}
+  _slotId: 20
+  _sideType: 2
 --- !u!1 &774168730
 GameObject:
   m_ObjectHideFlags: 0
@@ -4792,7 +4792,7 @@ GameObject:
   - component: {fileID: 864874450}
   - component: {fileID: 864874449}
   - component: {fileID: 864874448}
-  - component: {fileID: 864874447}
+  - component: {fileID: 864874451}
   m_Layer: 5
   m_Name: GreySlot
   m_TagString: Untagged
@@ -4821,23 +4821,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.2, y: 59.199974}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &864874447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864874445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 2093102743}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 597339091}
-  _slotId: 10
-  _sideType: 1
 --- !u!114 &864874448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4882,7 +4865,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 864874447}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -4932,6 +4915,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864874445}
   m_CullTransparentMesh: 1
+--- !u!114 &864874451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864874445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 2093102743}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 597339091}
+  _slotId: 10
+  _sideType: 1
 --- !u!1 &944207589
 GameObject:
   m_ObjectHideFlags: 0
@@ -5006,7 +5006,7 @@ GameObject:
   - component: {fileID: 978751784}
   - component: {fileID: 978751783}
   - component: {fileID: 978751782}
-  - component: {fileID: 978751781}
+  - component: {fileID: 978751785}
   m_Layer: 5
   m_Name: GreySlot
   m_TagString: Untagged
@@ -5035,23 +5035,6 @@ RectTransform:
   m_AnchoredPosition: {x: 59.8, y: -240.40001}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &978751781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 978751779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 1596844617}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 1532787534}
-  _slotId: 26
-  _sideType: 2
 --- !u!114 &978751782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5096,7 +5079,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 978751781}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -5146,6 +5129,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978751779}
   m_CullTransparentMesh: 1
+--- !u!114 &978751785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978751779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1596844617}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 1532787534}
+  _slotId: 27
+  _sideType: 2
 --- !u!1 &1020762761
 GameObject:
   m_ObjectHideFlags: 0
@@ -5310,7 +5310,7 @@ GameObject:
   - component: {fileID: 1041460218}
   - component: {fileID: 1041460217}
   - component: {fileID: 1041460216}
-  - component: {fileID: 1041460215}
+  - component: {fileID: 1041460219}
   m_Layer: 5
   m_Name: GreySlot
   m_TagString: Untagged
@@ -5339,23 +5339,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.2, y: -180.50005}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1041460215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041460213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 1922938509}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 686390081}
-  _slotId: 22
-  _sideType: 1
 --- !u!114 &1041460216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5400,7 +5383,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1041460215}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -5450,6 +5433,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041460213}
   m_CullTransparentMesh: 1
+--- !u!114 &1041460219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041460213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1922938509}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 686390081}
+  _slotId: 22
+  _sideType: 1
 --- !u!1 &1041708976
 GameObject:
   m_ObjectHideFlags: 0
@@ -5462,7 +5462,7 @@ GameObject:
   - component: {fileID: 1041708981}
   - component: {fileID: 1041708980}
   - component: {fileID: 1041708979}
-  - component: {fileID: 1041708978}
+  - component: {fileID: 1041708982}
   m_Layer: 5
   m_Name: GreySlot
   m_TagString: Untagged
@@ -5491,23 +5491,6 @@ RectTransform:
   m_AnchoredPosition: {x: -60.2, y: -120.50004}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1041708978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041708976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 809920276}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 177069110}
-  _slotId: 18
-  _sideType: 0
 --- !u!114 &1041708979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5552,7 +5535,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1041708978}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -5602,6 +5585,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041708976}
   m_CullTransparentMesh: 1
+--- !u!114 &1041708982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041708976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 809920276}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 177069110}
+  _slotId: 18
+  _sideType: 0
 --- !u!1 &1086370027
 GameObject:
   m_ObjectHideFlags: 0
@@ -5808,7 +5808,7 @@ GameObject:
   - component: {fileID: 1180244516}
   - component: {fileID: 1180244515}
   - component: {fileID: 1180244514}
-  - component: {fileID: 1180244513}
+  - component: {fileID: 1180244517}
   m_Layer: 5
   m_Name: WhiteSlot
   m_TagString: Untagged
@@ -5837,23 +5837,6 @@ RectTransform:
   m_AnchoredPosition: {x: -60, y: -180.20003}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1180244513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180244511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 1332740957}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 855646174}
-  _slotId: 21
-  _sideType: 0
 --- !u!114 &1180244514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5898,7 +5881,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1180244513}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -5948,6 +5931,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180244511}
   m_CullTransparentMesh: 1
+--- !u!114 &1180244517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180244511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1332740957}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 855646174}
+  _slotId: 21
+  _sideType: 0
 --- !u!1 &1187545039
 GameObject:
   m_ObjectHideFlags: 0
@@ -5960,7 +5960,7 @@ GameObject:
   - component: {fileID: 1187545044}
   - component: {fileID: 1187545043}
   - component: {fileID: 1187545042}
-  - component: {fileID: 1187545041}
+  - component: {fileID: 1187545045}
   m_Layer: 5
   m_Name: WhiteSlot
   m_TagString: Untagged
@@ -5989,23 +5989,6 @@ RectTransform:
   m_AnchoredPosition: {x: 60, y: 59.499996}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1187545041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187545039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 1550670748}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 1318064383}
-  _slotId: 11
-  _sideType: 2
 --- !u!114 &1187545042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6050,7 +6033,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187545041}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -6100,6 +6083,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187545039}
   m_CullTransparentMesh: 1
+--- !u!114 &1187545045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187545039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1550670748}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 1318064383}
+  _slotId: 11
+  _sideType: 2
 --- !u!1 &1198973667
 GameObject:
   m_ObjectHideFlags: 0
@@ -6440,7 +6440,7 @@ GameObject:
   - component: {fileID: 1274787630}
   - component: {fileID: 1274787629}
   - component: {fileID: 1274787628}
-  - component: {fileID: 1274787627}
+  - component: {fileID: 1274787631}
   m_Layer: 5
   m_Name: GreySlot
   m_TagString: Untagged
@@ -6469,23 +6469,6 @@ RectTransform:
   m_AnchoredPosition: {x: -60.2, y: 119.19999}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1274787627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274787625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 533125259}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 1784244295}
-  _slotId: 6
-  _sideType: 0
 --- !u!114 &1274787628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6530,7 +6513,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1274787627}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -6580,6 +6563,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274787625}
   m_CullTransparentMesh: 1
+--- !u!114 &1274787631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274787625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 533125259}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 1784244295}
+  _slotId: 6
+  _sideType: 0
 --- !u!1 &1292558344
 GameObject:
   m_ObjectHideFlags: 0
@@ -6892,7 +6892,7 @@ GameObject:
   - component: {fileID: 1394297226}
   - component: {fileID: 1394297225}
   - component: {fileID: 1394297224}
-  - component: {fileID: 1394297223}
+  - component: {fileID: 1394297227}
   m_Layer: 5
   m_Name: GreySlot
   m_TagString: Untagged
@@ -6921,23 +6921,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.2, y: -60.700035}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1394297223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394297221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 1421237782}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 1365445947}
-  _slotId: 16
-  _sideType: 1
 --- !u!114 &1394297224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6982,7 +6965,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1394297223}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -7032,6 +7015,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394297221}
   m_CullTransparentMesh: 1
+--- !u!114 &1394297227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394297221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1421237782}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 1365445947}
+  _slotId: 16
+  _sideType: 1
 --- !u!1 &1421237780
 GameObject:
   m_ObjectHideFlags: 0
@@ -7194,7 +7194,7 @@ GameObject:
   - component: {fileID: 1441052777}
   - component: {fileID: 1441052776}
   - component: {fileID: 1441052775}
-  - component: {fileID: 1441052774}
+  - component: {fileID: 1441052778}
   m_Layer: 5
   m_Name: GreySlot
   m_TagString: Untagged
@@ -7223,23 +7223,6 @@ RectTransform:
   m_AnchoredPosition: {x: 59.8, y: 239.00002}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1441052774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441052772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 88874116}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 701729033}
-  _slotId: 2
-  _sideType: 2
 --- !u!114 &1441052775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7284,7 +7267,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1441052774}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -7334,6 +7317,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441052772}
   m_CullTransparentMesh: 1
+--- !u!114 &1441052778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441052772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 88874116}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 701729033}
+  _slotId: 2
+  _sideType: 2
 --- !u!1 &1472978184
 GameObject:
   m_ObjectHideFlags: 0
@@ -7346,7 +7346,7 @@ GameObject:
   - component: {fileID: 1472978189}
   - component: {fileID: 1472978188}
   - component: {fileID: 1472978187}
-  - component: {fileID: 1472978186}
+  - component: {fileID: 1472978190}
   m_Layer: 5
   m_Name: GreySlot
   m_TagString: Untagged
@@ -7375,23 +7375,6 @@ RectTransform:
   m_AnchoredPosition: {x: 59.8, y: -0.70001745}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1472978186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472978184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 433617233}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 1776125280}
-  _slotId: 14
-  _sideType: 2
 --- !u!114 &1472978187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7436,7 +7419,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1472978186}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -7486,6 +7469,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472978184}
   m_CullTransparentMesh: 1
+--- !u!114 &1472978190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472978184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 433617233}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 1776125280}
+  _slotId: 14
+  _sideType: 2
 --- !u!1 &1506038425
 GameObject:
   m_ObjectHideFlags: 0
@@ -7924,7 +7924,7 @@ GameObject:
   - component: {fileID: 1711694577}
   - component: {fileID: 1711694576}
   - component: {fileID: 1711694575}
-  - component: {fileID: 1711694574}
+  - component: {fileID: 1711694578}
   m_Layer: 5
   m_Name: WhiteSlot
   m_TagString: Untagged
@@ -7953,23 +7953,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.3, y: -240.3}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1711694574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711694572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 1422105962}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 1174995727}
-  _slotId: 25
-  _sideType: 1
 --- !u!114 &1711694575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8014,7 +7997,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1711694574}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -8064,6 +8047,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711694572}
   m_CullTransparentMesh: 1
+--- !u!114 &1711694578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711694572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1422105962}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 1174995727}
+  _slotId: 25
+  _sideType: 1
 --- !u!1 &1717131250
 GameObject:
   m_ObjectHideFlags: 0
@@ -8182,7 +8182,7 @@ GameObject:
   - component: {fileID: 1724125424}
   - component: {fileID: 1724125423}
   - component: {fileID: 1724125422}
-  - component: {fileID: 1724125421}
+  - component: {fileID: 1724125425}
   m_Layer: 5
   m_Name: WhiteSlot
   m_TagString: Untagged
@@ -8211,23 +8211,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.49999827, y: -120.30003}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1724125421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724125419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 774168732}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 549164785}
-  _slotId: 19
-  _sideType: 1
 --- !u!114 &1724125422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8272,7 +8255,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1724125421}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -8322,6 +8305,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724125419}
   m_CullTransparentMesh: 1
+--- !u!114 &1724125425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724125419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 774168732}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 549164785}
+  _slotId: 19
+  _sideType: 1
 --- !u!1 &1743174682
 GameObject:
   m_ObjectHideFlags: 0
@@ -8636,7 +8636,7 @@ GameObject:
   - component: {fileID: 1839557588}
   - component: {fileID: 1839557587}
   - component: {fileID: 1839557586}
-  - component: {fileID: 1839557585}
+  - component: {fileID: 1839557589}
   m_Layer: 5
   m_Name: WhiteSlot
   m_TagString: Untagged
@@ -8665,23 +8665,6 @@ RectTransform:
   m_AnchoredPosition: {x: 60, y: -180.20003}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1839557585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839557583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 166158864}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 1852806906}
-  _slotId: 23
-  _sideType: 2
 --- !u!114 &1839557586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8726,7 +8709,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1839557585}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -8776,6 +8759,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839557583}
   m_CullTransparentMesh: 1
+--- !u!114 &1839557589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839557583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 166158864}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 1852806906}
+  _slotId: 23
+  _sideType: 2
 --- !u!1 &1852806905
 GameObject:
   m_ObjectHideFlags: 0
@@ -8819,7 +8819,7 @@ GameObject:
   - component: {fileID: 1871146466}
   - component: {fileID: 1871146465}
   - component: {fileID: 1871146464}
-  - component: {fileID: 1871146463}
+  - component: {fileID: 1871146467}
   m_Layer: 5
   m_Name: GreySlot
   m_TagString: Untagged
@@ -8848,23 +8848,6 @@ RectTransform:
   m_AnchoredPosition: {x: 59.8, y: 119.19999}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1871146463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1871146461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 1717131252}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 644363582}
-  _slotId: 8
-  _sideType: 2
 --- !u!114 &1871146464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8909,7 +8892,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1871146463}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -8959,6 +8942,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871146461}
   m_CullTransparentMesh: 1
+--- !u!114 &1871146467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871146461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1717131252}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 644363582}
+  _slotId: 8
+  _sideType: 2
 --- !u!1 &1891385727
 GameObject:
   m_ObjectHideFlags: 0
@@ -9258,7 +9258,7 @@ GameObject:
   - component: {fileID: 2092214185}
   - component: {fileID: 2092214184}
   - component: {fileID: 2092214183}
-  - component: {fileID: 2092214182}
+  - component: {fileID: 2092214186}
   m_Layer: 5
   m_Name: WhiteSlot
   m_TagString: Untagged
@@ -9287,23 +9287,6 @@ RectTransform:
   m_AnchoredPosition: {x: 60, y: -60.60002}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2092214182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2092214180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766e66267b8516f4883494d3f39ec943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _image: {fileID: 856752200}
-  _gameEditorView: {fileID: 1020762762}
-  _worldPosition: {fileID: 14424440}
-  _slotId: 17
-  _sideType: 2
 --- !u!114 &2092214183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9348,7 +9331,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2092214182}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Views.Editor.GameEditorSlotView, Assembly-CSharp
         m_MethodName: OnSelected
         m_Mode: 1
@@ -9398,6 +9381,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092214180}
   m_CullTransparentMesh: 1
+--- !u!114 &2092214186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092214180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5092c6b5acdb6cf4cbd38874187194b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 856752200}
+  _gameEditorView: {fileID: 1020762762}
+  _worldPosition: {fileID: 14424440}
+  _slotId: 17
+  _sideType: 2
 --- !u!1 &2093102741
 GameObject:
   m_ObjectHideFlags: 0

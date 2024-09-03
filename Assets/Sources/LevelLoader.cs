@@ -26,6 +26,9 @@ public class LevelLoader : MonoBehaviour
     [SerializeField]
     private Transform _right;
 
+    [SerializeField]
+    private LevelType _levelType;
+
     private EnemiesPoolService _enemiesPoolService;
 
     private const float DistanceToAcceptors = 9f;
@@ -48,6 +51,11 @@ public class LevelLoader : MonoBehaviour
 
             return;
         }
+
+        if (_levelType is not LevelType.None)
+        {
+            levelType = _levelType;
+        }  
 
         var levelData = GameServiceLocator.Get<IDatabase>().GetLevel(levelType);
 

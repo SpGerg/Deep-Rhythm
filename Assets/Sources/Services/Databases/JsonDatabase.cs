@@ -72,7 +72,9 @@ namespace Services.Databases
                 return JsonUtility.FromJson<LevelData>(File.ReadAllText(_editorLevel));
             }
 
-            return JsonUtility.FromJson<LevelData>(((TextAsset)Resources.Load($"Levels\\{levelType}.json")).text);
+            var level = Resources.Load<TextAsset>($"Levels\\{levelType.ToString().Replace(" ", "")}");
+
+            return JsonUtility.FromJson<LevelData>(level.text);
         }
 
         public bool IsCompleted(LevelType levelType)
