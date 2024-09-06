@@ -810,6 +810,7 @@ MonoBehaviour:
   _left: {fileID: 2048256088}
   _center: {fileID: 1307922975}
   _right: {fileID: 580525754}
+  _levelType: 1
 --- !u!114 &719871026
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,29 +11,29 @@ namespace Presenters
         public AcceptorsPresenter(AcceptorsView view,
             AcceptorView[] acceptors) : base(view)
         {
-            AcceptorsView = view;
-            AcceptorsModel = new AcceptorsModel(this, acceptors);
+            View = view;
+            Model = new AcceptorsModel(this, acceptors);
 
-            Model = AcceptorsModel;
+            base.Model = Model;
         }
 
-        public AcceptorsView AcceptorsView { get; }
-
-        protected AcceptorsModel AcceptorsModel { get; }
+        public new AcceptorsView View { get; }
+        
+        protected new AcceptorsModel Model { get; }
 
         public void ChooseCenter()
         {
-            AcceptorsModel.OnSelectedRight();
+            Model.OnSelectedRight();
         }
 
         public void OnSelectedLeft()
         {
-            AcceptorsModel.OnSelectedLeft();
+            Model.OnSelectedLeft();
         }
 
         public void OnSelectedRight()
         {
-            AcceptorsModel.OnSelectedRight();
+            Model.OnSelectedRight();
         }
 
         public void OnCollisionWithEnemy(AcceptorView acceptorView, Collider2D collider)
@@ -48,7 +48,7 @@ namespace Presenters
                 return;
             }
 
-            AcceptorsModel.OnCollisionWithEnemy(enemyView);
+            Model.OnCollisionWithEnemy(enemyView);
         }
     }
 }

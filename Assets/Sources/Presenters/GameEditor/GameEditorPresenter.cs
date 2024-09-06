@@ -12,17 +12,17 @@ namespace Presenters.GameEditor
     {
         public GameEditorPresenter(GameEditorView view, GameEditorSlotView[] _slots, AudioSource audioSource, MusicLinePresenter musicLinePresenter, GameEditorView.MusicTypeAndAudioClipPair[] clips) : base(view)
         {
-            GameEditorView = view;
-            GameEditorModel = new GameEditorModel(this, _slots.Select(slot => slot.GameEditorSlotPresenter).ToArray(), audioSource, musicLinePresenter);
+            View = view;
+            Model = new GameEditorModel(this, _slots.Select(slot => slot.GameEditorSlotPresenter).ToArray(), audioSource, musicLinePresenter);
 
             _clips = clips;
 
             SetMusic(MusicType.BaseAfterBase);
         }
 
-        protected GameEditorModel GameEditorModel { get; }
+        protected new GameEditorModel Model { get; }
 
-        protected GameEditorView GameEditorView { get; }
+        protected new GameEditorView View { get; }
 
         private readonly GameEditorView.MusicTypeAndAudioClipPair[] _clips;
 
@@ -30,32 +30,32 @@ namespace Presenters.GameEditor
         {
             if (!gameEditorSlotPresenter.IsBusy)
             {
-                GameEditorModel.SetEnemy(gameEditorSlotPresenter);
+                Model.SetEnemy(gameEditorSlotPresenter);
             }
             else
             {
-                GameEditorModel.RemoveEnemy(gameEditorSlotPresenter);
+                Model.RemoveEnemy(gameEditorSlotPresenter);
             }
         }
 
         public void Play()
         {
-            GameEditorModel.Play();
+            Model.Play();
         }
 
         public void PlayMusicPart()
         {
-            GameEditorModel.PlayMusicPart();
+            Model.PlayMusicPart();
         }
 
         public void NextSection()
         {
-            GameEditorModel.NextSection();
+            Model.NextSection();
         }
 
         public void PreviousSection()
         {
-            GameEditorModel.PreviousSection();
+            Model.PreviousSection();
         }
 
         public void SetMusic(MusicType musicType)
@@ -67,7 +67,7 @@ namespace Presenters.GameEditor
                 return;
             }
 
-            GameEditorModel.SetAudioClip(audioClip.AudioClip);
+            Model.SetAudioClip(audioClip.AudioClip);
         }
     }
 }

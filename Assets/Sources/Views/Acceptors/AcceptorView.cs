@@ -23,11 +23,11 @@ namespace Views.Acceptors
 
                 if (_isSelected)
                 {
-                    _renderer.sprite = _acceptorsPresenter.AcceptorsView.Selected;
+                    _renderer.sprite = _acceptorsPresenter.View.Selected;
                 }
                 else
                 {
-                    _renderer.sprite = _acceptorsPresenter.AcceptorsView.UnSelected;
+                    _renderer.sprite = _acceptorsPresenter.View.UnSelected;
                 }
             }
         }

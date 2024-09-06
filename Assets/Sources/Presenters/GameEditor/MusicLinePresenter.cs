@@ -8,26 +8,26 @@ namespace Presenters.GameEditor
     {
         public MusicLinePresenter(MusicLineView view, Vector2 start, float speed) : base(view)
         {
-            MusicLineView = view;
+            View = view;
 
-            MusicLineModel = new MusicLineModel(this, start, speed);
-            Model = MusicLineModel;
+            Model = new MusicLineModel(this, start, speed);
+            base.Model = Model;
 
-            MusicLineView.InitializeTransformable(this, MusicLineModel);
+            View.InitializeTransformable(this, Model);
         }
         
-        protected MusicLineModel MusicLineModel { get; }
+        protected new MusicLineModel Model { get; }
 
-        protected MusicLineView MusicLineView { get; }
+        protected new MusicLineView View { get; }
 
         public void ToggleMove(bool toggle)
         {
-            MusicLineModel.IsMove = toggle;
+            Model.IsMove = toggle;
         }
 
         public void OnCollided(Collider2D collider)
         {
-            MusicLineModel.OnCollided(collider);
+            Model.OnCollided(collider);
         }
     }
 }

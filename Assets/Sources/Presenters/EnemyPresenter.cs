@@ -14,17 +14,17 @@ namespace Presenters
     {
         public EnemyPresenter(EnemyView view, float speed) : base(view)
         {
-            EnemyView = view;
-            EnemyModel = new BasicEnemyModel(this, speed);
+            View = view;
+            Model = new BasicEnemyModel(this, speed);
 
-            Model = EnemyModel;
+            base.Model = Model;
 
             view.InitializeEnemy(this);
-            view.InitializeTransformable(this, EnemyModel);
+            view.InitializeTransformable(this, Model);
         }
 
-        protected BasicEnemyModel EnemyModel { get; }
+        protected new BasicEnemyModel Model { get; }
 
-        protected EnemyView EnemyView { get; } 
+        protected new EnemyView View { get; } 
     }
 }

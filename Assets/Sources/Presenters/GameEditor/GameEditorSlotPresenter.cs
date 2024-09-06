@@ -9,27 +9,27 @@ namespace Presenters.GameEditor
     {
         public GameEditorSlotPresenter(GameEditorSlotView view) : base(view)
         {
-            GameEditorSlotView = view;
+            View = view;
         }
 
-        public Vector2 WorldPosition => GameEditorSlotView.WorldPosition.position;
+        public Vector2 WorldPosition => View.WorldPosition.position;
 
-        public SideType SideType => GameEditorSlotView.SideType;
+        public SideType SideType => View.SideType;
 
-        public int SlotId => GameEditorSlotView.SlotId;
+        public int SlotId => View.SlotId;
 
-        public bool IsBusy => GameEditorSlotView.Image.enabled;
+        public bool IsBusy => View.Image.enabled;
 
-        protected GameEditorSlotView GameEditorSlotView { get; }
+        protected new GameEditorSlotView View { get; }
 
         public void OnSelected()
         {
-            GameEditorSlotView.OnSelected();
+            View.OnSelected();
         }
 
         public void ToggleImage(bool toggle)
         {
-            GameEditorSlotView.Image.enabled = toggle;
+            View.Image.enabled = toggle;
         }
     }
 }
