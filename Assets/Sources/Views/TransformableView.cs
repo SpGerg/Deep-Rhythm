@@ -29,7 +29,7 @@ namespace Views
             _transformable.Position = position;
         }
 
-        public void SetRotation(float rotation) 
+        public void SetRotation(float rotation)
         {
             _transformable.Rotation = rotation;
         }

@@ -15,7 +15,7 @@ namespace Presenters.GameEditor
 
             View.InitializeTransformable(this, Model);
         }
-        
+
         protected new MusicLineModel Model { get; }
 
         protected new MusicLineView View { get; }

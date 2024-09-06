@@ -18,7 +18,7 @@ namespace Presenters
         }
 
         public new AcceptorsView View { get; }
-        
+
         protected new AcceptorsModel Model { get; }
 
         public void ChooseCenter()

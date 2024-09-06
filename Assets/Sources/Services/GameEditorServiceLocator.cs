@@ -1,9 +1,8 @@
-﻿using Services.Databases.Interfaces;
-using Services.Databases;
+﻿using Services.Databases;
+using Services.Databases.Interfaces;
 using Services.Interfaces;
 using System;
 using UnityEngine;
-using Views;
 
 namespace Services
 {

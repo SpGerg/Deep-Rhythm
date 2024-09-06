@@ -3,12 +3,7 @@ using Services.Databases.Datas;
 using Services.Databases.Enums;
 using Services.Databases.Interfaces;
 using Services.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Services.Databases
@@ -44,7 +39,7 @@ namespace Services.Databases
 
         public void CompleteLevel(LevelType levelType)
         {
-            if (!File.Exists(_progress)) 
+            if (!File.Exists(_progress))
             {
                 var defaultProgress = ProgressData.CreateDefault();
                 defaultProgress.CompletedLevels[levelType] = true;

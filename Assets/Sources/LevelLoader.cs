@@ -55,7 +55,7 @@ public class LevelLoader : MonoBehaviour
         if (_levelType is not LevelType.None)
         {
             levelType = _levelType;
-        }  
+        }
 
         var levelData = GameServiceLocator.Get<IDatabase>().GetLevel(levelType);
 

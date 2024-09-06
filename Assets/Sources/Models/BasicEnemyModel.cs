@@ -1,7 +1,4 @@
-﻿using Models.Interfaces;
-using Presenters;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using Presenters;
 
 namespace Models
 {

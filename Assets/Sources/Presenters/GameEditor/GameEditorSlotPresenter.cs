@@ -1,6 +1,5 @@
 ﻿using Models.GameEditor.Enums;
 using UnityEngine;
-using UnityEngine.UI;
 using Views.Editor;
 
 namespace Presenters.GameEditor

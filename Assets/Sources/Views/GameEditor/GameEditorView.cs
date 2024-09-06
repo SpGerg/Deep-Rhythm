@@ -64,7 +64,7 @@ namespace Views
         }
 
         public void PreviousSection()
-        { 
+        {
             GameEditorPresenter.PreviousSection();
         }
     }

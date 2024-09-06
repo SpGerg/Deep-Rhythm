@@ -1,12 +1,5 @@
 ﻿using Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Views;
-using Views.Editor;
-using Views.Interfaces;
 
 namespace Presenters
 {
@@ -25,6 +18,6 @@ namespace Presenters
 
         protected new BasicEnemyModel Model { get; }
 
-        protected new EnemyView View { get; } 
+        protected new EnemyView View { get; }
     }
 }

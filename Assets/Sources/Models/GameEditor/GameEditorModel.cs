@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Views.Editor;
 using Views.GameEditor;
 
 namespace Models.GameEditor
@@ -37,7 +36,7 @@ namespace Models.GameEditor
 
             var sections = level.sections;
 
-            for (var i = 0;i < sections.Length;i++)
+            for (var i = 0; i < sections.Length; i++)
             {
                 var section = sections[i];
 
@@ -125,7 +124,7 @@ namespace Models.GameEditor
             else
             {
                 _sections.Add(_currentSection, newSection);
-            }   
+            }
 
             _currentSection++;
         }
